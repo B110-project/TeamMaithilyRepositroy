@@ -58,5 +58,5 @@ public class Address
 				+ ", pincode=" + pincode + ", houseNo=" + houseNo + ", landmark=" + landmark + "]";
 	}
 
-	//only for checking
+	
 }
