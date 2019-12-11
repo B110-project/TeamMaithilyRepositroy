@@ -2,18 +2,14 @@ package com.crts.app.hm.main.dto;
 
 
 import com.crts.app.hm.main.model.State;
-import com.crts.app.hm.main.model.StatusMaster;
 
 public class DistrictDto {
 	
 	private int districtId;
 	private String districtName;
 	private int districtCode;
-	
-	
 	private State stateId;
-	
-	private StatusMaster statusId;
+	private int districtStatus;
 
 	public int getDistrictId() {
 		return districtId;
@@ -49,19 +45,20 @@ public class DistrictDto {
 		this.stateId = stateId;
 	}
 
-	public StatusMaster getstatusId() {
-		return statusId;
+	public int getDistrictStatus() {
+		return districtStatus;
 	}
 
-	public void setstatusId(StatusMaster statusId) {
-		this.statusId = statusId;
+	public void setDistrictStatus(int districtStatus) {
+		this.districtStatus = districtStatus;
 	}
 
 	@Override
 	public String toString() {
-		return "District [districtId=" + districtId + ", districtName=" + districtName + ", districtCode="
-				+ districtCode + ", stateCode=" + stateId
-				+ ", statusId=" + statusId + "]";
+		return "DistrictDto [districtId=" + districtId + ", districtName=" + districtName + ", districtCode="
+				+ districtCode + ", stateId=" + stateId + ", districtStatus=" + districtStatus + "]";
 	}
+
+	
 
 }

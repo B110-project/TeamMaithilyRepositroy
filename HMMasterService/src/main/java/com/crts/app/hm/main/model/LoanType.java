@@ -1,11 +1,9 @@
 package com.crts.app.hm.main.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
 public class LoanType {
@@ -13,9 +11,7 @@ public class LoanType {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int loanTypeId;
 	private String loanTypeName;
-	@OneToOne(cascade = CascadeType.ALL)
-	private StatusMaster loanTypeStatus;
-
+	private int loanTypeStatus;
 	public int getLoanTypeId() {
 		return loanTypeId;
 	}
@@ -32,11 +28,11 @@ public class LoanType {
 		this.loanTypeName = loanTypeName;
 	}
 
-	public StatusMaster getLoanTypeStatus() {
+	public int getLoanTypeStatus() {
 		return loanTypeStatus;
 	}
 
-	public void setLoanTypeStatus(StatusMaster loanTypeStatus) {
+	public void setLoanTypeStatus(int loanTypeStatus) {
 		this.loanTypeStatus = loanTypeStatus;
 	}
 
@@ -45,5 +41,7 @@ public class LoanType {
 		return "LoanType [loanTypeId=" + loanTypeId + ", loanTypeName=" + loanTypeName + ", loanTypeStatus="
 				+ loanTypeStatus + "]";
 	}
+
+	
 
 }

@@ -4,7 +4,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.crts.app.hm.main.dto.RoleDto;
 import com.crts.app.hm.main.model.Role;
 
 @Repository

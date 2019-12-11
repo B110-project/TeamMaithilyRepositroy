@@ -15,12 +15,9 @@ public class District {
 	private int districtId;
 	private String districtName;
 	private int districtCode;
-	
 	@OneToOne(cascade = CascadeType.ALL)
 	private State stateId;
-	@OneToOne(cascade = CascadeType.ALL)
-	private StatusMaster statusId;
-
+	private int districtStatus;
 	public int getDistrictId() {
 		return districtId;
 	}
@@ -45,8 +42,6 @@ public class District {
 		this.districtCode = districtCode;
 	}
 
-	
-
 	public State getStateId() {
 		return stateId;
 	}
@@ -55,19 +50,20 @@ public class District {
 		this.stateId = stateId;
 	}
 
-	public StatusMaster getstatusId() {
-		return statusId;
+	public int getDistrictStatus() {
+		return districtStatus;
 	}
 
-	public void setstatusId(StatusMaster statusId) {
-		this.statusId = statusId;
+	public void setDistrictStatus(int districtStatus) {
+		this.districtStatus = districtStatus;
 	}
 
 	@Override
 	public String toString() {
 		return "District [districtId=" + districtId + ", districtName=" + districtName + ", districtCode="
-				+ districtCode + ", stateCode=" + stateId
-				+ ", statusId=" + statusId + "]";
+				+ districtCode + ", stateId=" + stateId + ", districtStatus=" + districtStatus + "]";
 	}
+
+	
 
 }

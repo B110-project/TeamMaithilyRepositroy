@@ -23,6 +23,11 @@ public class StatusMasterDto {
 	public void setStatusCode(int statusCode) {
 		this.statusCode = statusCode;
 	}
+	@Override
+	public String toString() {
+		return "StatusMasterDto [statusId=" + statusId + ", statusName=" + statusName + ", statusCode=" + statusCode
+				+ "]";
+	}
 
 	
 	

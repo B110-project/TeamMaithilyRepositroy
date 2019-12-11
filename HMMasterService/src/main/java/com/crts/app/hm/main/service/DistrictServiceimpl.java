@@ -28,7 +28,7 @@ public class DistrictServiceimpl implements IDistrictService {
 	@Override
 	public List<DistrictDto> getAllDistricts() {
 		List<District> districtList=(List<District>) repo.findAll();
-		List<DistrictDto> districtDtoList= new ArrayList();
+		List<DistrictDto> districtDtoList= new ArrayList<DistrictDto>();
 		for (District district : districtList) {
 			DistrictDto districtDto= m.map(district, DistrictDto.class);
 			districtDtoList.add(districtDto);

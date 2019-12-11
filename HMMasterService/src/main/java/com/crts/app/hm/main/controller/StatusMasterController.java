@@ -40,7 +40,6 @@ public class StatusMasterController {
 	@RequestMapping("/deleteAllStatus")
 	public String deleteAllStatus() {
 		ser.deleteAllStatus();
-		List<StatusMasterDto> statusMasterDtoList = ser.getAllStatus();
 		return "All Status Deleted Successfully";
 	}
 

@@ -16,6 +16,7 @@ public class UserDetails {
 	private String userMiddleName;
 	private String userLastName;
 	private long userMobileNo;
+	
 	public int getUserDetailsId() {
 		return userDetailsId;
 	}
