@@ -1,5 +1,5 @@
 package com.crts.app.hm.main.service;
 
-public interface Iservice {
+public interface IService {
 
 }

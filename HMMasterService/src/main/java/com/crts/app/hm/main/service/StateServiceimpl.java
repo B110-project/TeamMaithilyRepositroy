@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.crts.app.hm.main.dto.StateDto;
 import com.crts.app.hm.main.model.State;
-import com.crts.app.hm.main.repository.IstateRepository;
+import com.crts.app.hm.main.repository.IStateRepository;
 
 @Service
 public class StateServiceimpl implements IStateService {
@@ -17,7 +17,7 @@ public class StateServiceimpl implements IStateService {
 	ModelMapper mm = new ModelMapper();
 
 	@Autowired
-	IstateRepository repo;
+	IStateRepository repo;
 
 	@Override
 	public void saveState(StateDto stateDto) {

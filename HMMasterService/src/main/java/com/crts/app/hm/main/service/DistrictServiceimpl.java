@@ -60,17 +60,4 @@ public class DistrictServiceimpl implements IDistrictService {
 		repo.deleteById(districtId);	
 	}
 
-	@Override
-	public void updateDistrictById(DistrictDto districtDto) {
-		District district = m.map(districtDto, District.class);
-		repo.save(district);
-	}
-
-	@Override
-	public DistrictDto editDistrictById(int districtId) {
-		District district=repo.findById(districtId).get();
-		DistrictDto districtDto=m.map(district, DistrictDto.class);
-		return districtDto;
-	}
-
 }

@@ -18,8 +18,4 @@ public interface IDistrictService {
 
 	public void deleteDistrictById(int districtId);
 
-	public void updateDistrictById(DistrictDto districtDto);
-
-	public DistrictDto editDistrictById(int districtId);
-
 }

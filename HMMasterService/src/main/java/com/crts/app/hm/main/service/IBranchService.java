@@ -15,6 +15,4 @@ public interface IBranchService
 	 public BranchDto getBranchByName(String branchName);
 	 public void deleteAllBranches();
 	 public void deleteBranchById(int branchId);
-	 public BranchDto editBranchById(int branchId);
-	 public BranchDto updateBranchById(int branchId);
 }

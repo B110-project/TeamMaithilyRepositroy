@@ -1,16 +1,9 @@
-package com.crts .app.hm.main.model;
+package com.crts.app.hm.main.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class BranchType {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BranchTypeDto {
 	private int branchTypeId;
 	private String branchTypeName;
+	
 	public int getBranchTypeId() {
 		return branchTypeId;
 	}
@@ -25,7 +18,6 @@ public class BranchType {
 	}
 	@Override
 	public String toString() {
-		return "BranchType [branchTypeId=" + branchTypeId + ", branchTypeName=" + branchTypeName + "]";
+		return "BranchTypeDto [branchTypeId=" + branchTypeId + ", branchTypeName=" + branchTypeName + "]";
 	}
-	
 }

@@ -17,9 +17,9 @@ public class BranchController {
 	@Autowired
 	IBranchService ser;
 
-	@RequestMapping(value = "/saveBranch", method = RequestMethod.POST, produces = "application/json")
-	public String saveBranch(@RequestBody BranchDto branch) {
-		ser.saveBranch(branch);
+	@RequestMapping(value = "/saveBranch", method = RequestMethod.POST)
+	public String saveBranch(@RequestBody BranchDto branchDto) {
+		ser.saveBranch(branchDto);
 		return "Branch Saved Successfully";
 	}
 
@@ -56,7 +56,7 @@ public class BranchController {
 
 	@RequestMapping(value = "/editBranchById/{branchId}")
 	public BranchDto editBranchById(@PathVariable int branchId) {
-		BranchDto branchdto = ser.editBranchById(branchId);
+		BranchDto branchdto = ser.getBranchById(branchId);
 		return branchdto;
 	}
 
